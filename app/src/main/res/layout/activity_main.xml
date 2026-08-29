@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ligar PC"
+            android:textColor="@color/text_main"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Envia Wake-on-LAN na sua rede local."
+            android:textColor="@color/text_muted"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@color/panel"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MAC da placa de rede"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/macInput"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/accent"
+                android:inputType="text"
+                android:singleLine="true"
+                android:text="AA:BB:CC:DD:EE:FF"
+                android:textColor="@color/text_main"
+                android:textColorHint="@color/text_muted"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Broadcast"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/broadcastInput"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/accent"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:text="192.168.0.255"
+                android:textColor="@color/text_main"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Porta"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/portInput"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/accent"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text="9"
+                android:textColor="@color/text_main"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/wakeButton"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="22dp"
+            android:backgroundTint="@color/accent"
+            android:text="Ligar PC"
+            android:textColor="#07130D"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Pronto para enviar."
+            android:textColor="@color/text_muted"
+            android:textSize="15sp" />
+    </LinearLayout>
+</ScrollView>
