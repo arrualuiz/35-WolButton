@@ -40,7 +40,7 @@ public class MainActivity extends Activity {
 
     private void loadSettings() {
         SharedPreferences prefs = getSharedPreferences(PREFS, MODE_PRIVATE);
-        macInput.setText(prefs.getString("mac", "AA:BB:CC:DD:EE:FF"));
+        macInput.setText(prefs.getString("mac", ""));
         broadcastInput.setText(prefs.getString("broadcast", "192.168.0.255"));
         portInput.setText(prefs.getString("port", "9"));
     }
@@ -58,6 +58,11 @@ public class MainActivity extends Activity {
         String mac = macInput.getText().toString().trim();
         String broadcast = broadcastInput.getText().toString().trim();
         String portText = portInput.getText().toString().trim();
+
+        if (mac.isEmpty()) {
+            statusText.setText("Informe o MAC da placa de rede do PC.");
+            return;
+        }
 
         saveSettings(mac, broadcast, portText);
         statusText.setText("Enviando pacote...");

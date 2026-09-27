@@ -50,7 +50,7 @@
                 android:backgroundTint="@color/accent"
                 android:inputType="text"
                 android:singleLine="true"
-                android:text="AA:BB:CC:DD:EE:FF"
+                android:hint="AA:BB:CC:DD:EE:FF"
                 android:textColor="@color/text_main"
                 android:textColorHint="@color/text_muted"
                 android:textSize="18sp" />
